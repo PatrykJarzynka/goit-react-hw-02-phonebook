@@ -13,12 +13,13 @@ class App extends Component {
 
   addContact = event => {
     event.preventDefault();
-    this.state.contacts.push(this.state.name);
-    this.setState({ name: '' });
+    const contact = {name: this.state.name, number: this.state.number }
+    this.setState(({contacts})=> ({contacts: [contact, ...contacts]}))
   };
 
   handleChange = event => {
-    this.setState({ name: event.currentTarget.value });
+    const value = event.target.value;
+    this.setState({ [event.target.name]: value });
   };
 
   render() {
@@ -27,6 +28,7 @@ class App extends Component {
         <h1>Phonebook</h1>
         <ContactForm
           value={this.state.name}
+          number={this.state.number}
           onSubmit={this.addContact}
           onChange={this.handleChange}
         ></ContactForm>
