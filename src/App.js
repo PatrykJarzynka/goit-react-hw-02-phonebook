@@ -1,6 +1,8 @@
 import './App.css';
 import React, { Component } from 'react';
-import Section from './components/Section';
+import ContactForm from './components/ContactForm';
+import ContactList from './components/ContactList';
+import Filter from './components/Filter';
 
 class App extends Component {
   state = {
@@ -9,7 +11,15 @@ class App extends Component {
   };
 
   render() {
-    return <Section title="Phonebook"></Section>
+    return (
+      <div>
+        <h1>Phonebook</h1>
+        <ContactForm></ContactForm>
+        <h2>Contacts</h2>
+        <Filter></Filter>
+        <ContactList></ContactList>
+      </div>
+    );
   }
 }
 

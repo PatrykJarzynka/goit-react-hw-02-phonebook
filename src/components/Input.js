@@ -1,6 +1,5 @@
 function Input(props) {
   return (
-    <div>
       <input
         type="text"
         name="name"
@@ -8,7 +7,6 @@ function Input(props) {
         title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
         required
       />
-    </div>
   );
 }
 
