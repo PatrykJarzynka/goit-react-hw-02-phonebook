@@ -13,8 +13,8 @@ class App extends Component {
 
   addContact = event => {
     event.preventDefault();
-    const contact = {name: this.state.name, number: this.state.number }
-    this.setState(({contacts})=> ({contacts: [contact, ...contacts]}))
+    const contact = { name: this.state.name, number: this.state.number };
+    this.setState(({ contacts }) => ({ contacts: [contact, ...contacts] }));
   };
 
   handleChange = event => {

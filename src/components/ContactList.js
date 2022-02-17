@@ -1,10 +1,12 @@
 import { nanoid } from 'nanoid';
 
-function ContactList({ list } ) {
+function ContactList({ list }) {
+  let contacts = list.map(contact => (
+    <li key={nanoid()}>
+      {contact.name}:{contact.number}
+    </li>
+  ));
 
-  let contacts = list.map(contact => <li key={nanoid()}>{contact.name}:{ contact.number}</li>);
-
-    
   return <ul>{contacts}</ul>;
 }
 

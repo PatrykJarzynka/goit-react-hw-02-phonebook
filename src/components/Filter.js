@@ -1,8 +1,5 @@
-
 function Filter(props) {
-    
-    return <div></div>
-
+  return <div></div>;
 }
 
 export default Filter;

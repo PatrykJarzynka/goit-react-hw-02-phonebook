@@ -1,4 +1,4 @@
-function Number({number, onChange}) {
+function Number({ number, onChange }) {
   return (
     <input
       type="tel"
