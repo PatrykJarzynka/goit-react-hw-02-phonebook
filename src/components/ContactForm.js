@@ -1,12 +1,12 @@
 import Button from "./Button";
 import Input from "./Input";
 
-function ContactForm(props) {
+function ContactForm({ value, onSubmit, onChange}) {
 
- return( <div>
-    <Input></Input>
-    <Button></Button>
-  </div>  
+  return (<form onSubmit={onSubmit} >
+    <Input type="text" value ={value} onChange={onChange}></Input>
+    <Button type = "submit"></Button>
+  </form>  
 
   )
 };
