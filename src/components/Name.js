@@ -1,4 +1,4 @@
-function Input({name,onChange}) {
+function Name({name,onChange}) {
   return (
       <input
         type="text"
@@ -12,4 +12,4 @@ function Input({name,onChange}) {
   );
 }
 
-export default Input;
+export default Name;
