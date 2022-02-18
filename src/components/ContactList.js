@@ -8,6 +8,7 @@ function ContactList({ list, filter }) {
         {contact.name}:{contact.number}
       </li>
     ));
+  
 
   return <ul>{contacts}</ul>;
 }
