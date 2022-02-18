@@ -1,5 +1,9 @@
-function Button(props) {
-  return <button type="submit">Add contact</button>;
+function Button({ label, type, onClick }) {
+  return (
+    <button type={type} onClick={onClick}>
+      {label}
+    </button>
+  );
 }
 
 export default Button;

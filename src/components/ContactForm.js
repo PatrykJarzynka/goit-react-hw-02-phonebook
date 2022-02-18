@@ -27,7 +27,7 @@ class ContactForm extends Component {
         <Name type="text" value={this.state.name} onChange={this.handleChange}></Name>
         <span>Number</span>
         <Number type="tel" number={this.state.number} onChange={this.handleChange}></Number>
-        <Button type="submit"></Button>
+        <Button type="submit" label={'Add contact'}></Button>
       </form>
     );
   }
