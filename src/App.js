@@ -8,22 +8,17 @@ class App extends Component {
   state = {
     contacts: [],
     filter: '',
-    name: '',
-    number: '',
   };
 
-  addContact = event => {
-    event.preventDefault();
-    const contact = { name: this.state.name, number: this.state.number };
+  addContact = (name, number) => {
+    const contact = { name: name, number: number };
     this.setState(({ contacts }) => ({ contacts: [contact, ...contacts], name: '', number: '' }));
   };
 
-  handleChange = event => {
+  handleFilter = event => {
     const value = event.target.value;
-    this.setState({ [event.target.name]: value });
+    this.setState({[event.target.name]: value });
   };
-
-  contactFilter = () => {};
 
   render() {
     return (
@@ -33,11 +28,10 @@ class App extends Component {
           value={this.state.name}
           number={this.state.number}
           onSubmit={this.addContact}
-          onChange={this.handleChange}
         ></ContactForm>
         <h2>Contacts</h2>
-        <Filter value={this.state.filter} onChange={this.handleChange}></Filter>
-        <ContactList list={this.state.contacts} filter = {this.state.filter}></ContactList>
+        <Filter value={this.state.filter} onChange={this.handleFilter}></Filter>
+        <ContactList list={this.state.contacts} filter={this.state.filter}></ContactList>
       </div>
     );
   }

@@ -1,17 +1,36 @@
+import { Component } from 'react';
 import Button from './Button';
 import Name from './Name';
 import Number from './Number';
 
-function ContactForm({ value, onSubmit, onChange, number }) {
-  return (
-    <form onSubmit={onSubmit}>
-      <span>Name</span>
-      <Name type="text" value={value} onChange={onChange}></Name>
-      <span>Number</span>
-      <Number type="tel" number={number} onChange={onChange}></Number>
-      <Button type="submit"></Button>
-    </form>
-  );
+class ContactForm extends Component {
+  state = {
+    name: '',
+    number: '',
+  };
+
+  handleSubmit = event => {
+    event.preventDefault();
+    this.props.onSubmit(this.state.name, this.state.number);
+    this.setState({ name: '', number: '' });
+  };
+
+  handleChange = event => {
+    const value = event.target.value;
+    this.setState({ [event.target.name]: value });
+  };
+
+  render() {
+    return (
+      <form onSubmit={this.handleSubmit}>
+        <span>Name</span>
+        <Name type="text" value={this.state.name} onChange={this.handleChange}></Name>
+        <span>Number</span>
+        <Number type="tel" number={this.state.number} onChange={this.handleChange}></Number>
+        <Button type="submit"></Button>
+      </form>
+    );
+  }
 }
 
 export default ContactForm;
