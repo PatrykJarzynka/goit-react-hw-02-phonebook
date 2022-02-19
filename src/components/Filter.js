@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import PropTypes from 'prop-types';
 
 const FancyFilterInput = styled.input({
   width: '100px',
@@ -23,5 +24,10 @@ function Filter({ value, onChange }) {
     </FancyFilter>
   );
 }
+
+Filter.propTypes = {
+  value: PropTypes.string,
+  onChange: PropTypes.func,
+};
 
 export default Filter;

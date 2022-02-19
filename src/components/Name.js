@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import PropTypes from 'prop-types';
 
 const FancyInput = styled.input({
   width: '200px',
@@ -20,5 +21,10 @@ function Name({ name, onChange }) {
     />
   );
 }
+
+Name.propTypes = {
+  name: PropTypes.string,
+  onChange: PropTypes.func,
+};
 
 export default Name;

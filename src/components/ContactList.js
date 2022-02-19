@@ -1,6 +1,7 @@
 import { nanoid } from 'nanoid';
 import Button from './Button';
 import styled from '@emotion/styled';
+import PropTypes from 'prop-types';
 
 const FancyList = styled.ul({
   fontWeight: 500,
@@ -18,5 +19,11 @@ function ContactList({ list, filter, onClick }) {
 
   return <FancyList>{contacts}</FancyList>;
 }
+
+ContactList.propTypes = {
+  list: PropTypes.array,
+  filter: PropTypes.string,
+  onClick: PropTypes.func,
+};
 
 export default ContactList;
