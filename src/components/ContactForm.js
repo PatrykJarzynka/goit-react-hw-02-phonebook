@@ -2,6 +2,17 @@ import { Component } from 'react';
 import Button from './Button';
 import Name from './Name';
 import Number from './Number';
+import styled from '@emotion/styled';
+
+
+const FancyForm = styled.form({
+  border: '1px solid black',
+  display: 'flex',
+  flexDirection: 'column',
+  width: "500px"
+});
+
+
 
 class ContactForm extends Component {
   state = {
@@ -22,13 +33,13 @@ class ContactForm extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <FancyForm onSubmit={this.handleSubmit}>
         <span>Name</span>
         <Name type="text" value={this.state.name} onChange={this.handleChange}></Name>
         <span>Number</span>
         <Number type="tel" number={this.state.number} onChange={this.handleChange}></Number>
         <Button type="submit" label={'Add contact'}></Button>
-      </form>
+      </FancyForm>
     );
   }
 }

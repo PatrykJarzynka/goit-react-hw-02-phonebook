@@ -1,3 +1,11 @@
+import styled from '@emotion/styled';
+
+const FancyInput = styled.input({
+
+
+  
+});
+
 function Name({ name, onChange }) {
   return (
     <input
