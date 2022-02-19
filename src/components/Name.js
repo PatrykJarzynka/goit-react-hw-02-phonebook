@@ -1,14 +1,15 @@
 import styled from '@emotion/styled';
 
 const FancyInput = styled.input({
-
-
-  
+  width: "200px",
+  marginLeft: 5,
+  marginBottom: 20,
+  "&:focus":{outlineColor: 'blue'}
 });
 
 function Name({ name, onChange }) {
   return (
-    <input
+    <FancyInput
       type="text"
       name="name"
       pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"

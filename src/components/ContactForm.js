@@ -9,7 +9,13 @@ const FancyForm = styled.form({
   border: '1px solid black',
   display: 'flex',
   flexDirection: 'column',
-  width: "500px"
+  width: "500px",
+  marginLeft: 5,
+});
+
+const StyledSpan = styled.span({
+  marginLeft: 5,
+  fontWeight:500
 });
 
 
@@ -34,9 +40,9 @@ class ContactForm extends Component {
   render() {
     return (
       <FancyForm onSubmit={this.handleSubmit}>
-        <span>Name</span>
+        <StyledSpan>Name</StyledSpan>
         <Name type="text" value={this.state.name} onChange={this.handleChange}></Name>
-        <span>Number</span>
+        <StyledSpan>Number</StyledSpan>
         <Number type="tel" number={this.state.number} onChange={this.handleChange}></Number>
         <Button type="submit" label={'Add contact'}></Button>
       </FancyForm>

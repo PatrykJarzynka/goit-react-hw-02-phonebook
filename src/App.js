@@ -4,6 +4,11 @@ import ContactForm from './components/ContactForm';
 import ContactList from './components/ContactList';
 import Filter from './components/Filter';
 import { nanoid } from 'nanoid';
+import styled from '@emotion/styled';
+
+const StyledHeader = styled.h1({
+  marginLeft: 5,
+});
 
 class App extends Component {
   state = {
@@ -30,11 +35,10 @@ class App extends Component {
     this.setState({ [event.target.name]: value });
   };
 
-
   render() {
     return (
       <div>
-        <h1>Phonebook</h1>
+        <StyledHeader>Phonebook</StyledHeader>
         <ContactForm
           value={this.state.name}
           number={this.state.number}

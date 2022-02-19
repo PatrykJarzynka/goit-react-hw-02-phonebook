@@ -1,6 +1,15 @@
+import styled from '@emotion/styled';
+
+const FancyInput = styled.input({
+  width: '200px',
+  marginLeft: 5,
+  marginBottom: 20,
+  "&:focus":{outlineColor: 'blue'}
+});
+
 function Number({ number, onChange }) {
   return (
-    <input
+    <FancyInput
       type="tel"
       name="number"
       pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
