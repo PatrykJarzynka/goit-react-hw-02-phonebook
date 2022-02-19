@@ -1,5 +1,10 @@
 import { nanoid } from 'nanoid';
 import Button from './Button';
+import styled from '@emotion/styled';
+
+const FancyList = styled.ul({
+  fontWeight: 500,
+});
 
 function ContactList({ list, filter, onClick }) {
   let contacts = list
@@ -11,7 +16,7 @@ function ContactList({ list, filter, onClick }) {
       </li>
     ));
 
-  return <ul>{contacts}</ul>;
+  return <FancyList>{contacts}</FancyList>;
 }
 
 export default ContactList;

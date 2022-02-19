@@ -1,9 +1,26 @@
+import styled from '@emotion/styled';
+
+const FancyFilterInput = styled.input({
+  width: '100px',
+  '&:focus': { outlineColor: 'blue' },
+});
+
+const FancyFilter = styled.div({
+  display: 'flex',
+  flexDirection: 'column',
+});
+
 function Filter({ value, onChange }) {
   return (
-    <div>
+    <FancyFilter>
       <span>Find contacts by name</span>
-      <input type="text" name="filter" value={value} onChange={onChange}></input>
-    </div>
+      <FancyFilterInput
+        type="text"
+        name="filter"
+        value={value}
+        onChange={onChange}
+      ></FancyFilterInput>
+    </FancyFilter>
   );
 }
 

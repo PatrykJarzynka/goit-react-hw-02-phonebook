@@ -4,7 +4,7 @@ const FancyInput = styled.input({
   width: '200px',
   marginLeft: 5,
   marginBottom: 20,
-  "&:focus":{outlineColor: 'blue'}
+  '&:focus': { outlineColor: 'blue' },
 });
 
 function Number({ number, onChange }) {

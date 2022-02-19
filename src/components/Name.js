@@ -1,10 +1,10 @@
 import styled from '@emotion/styled';
 
 const FancyInput = styled.input({
-  width: "200px",
+  width: '200px',
   marginLeft: 5,
   marginBottom: 20,
-  "&:focus":{outlineColor: 'blue'}
+  '&:focus': { outlineColor: 'blue' },
 });
 
 function Name({ name, onChange }) {
