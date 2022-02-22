@@ -38,10 +38,10 @@ class ContactForm extends Component {
     return (
       <FancyForm onSubmit={this.handleSubmit}>
         <StyledSpan>Name</StyledSpan>
-        <Name type="text" value={this.state.name} onChange={this.handleChange}></Name>
+        <Name type="text" value={this.state.name} onChange={this.handleChange} />
         <StyledSpan>Number</StyledSpan>
-        <Number type="tel" number={this.state.number} onChange={this.handleChange}></Number>
-        <Button type="submit" label={'Add contact'}></Button>
+        <Number type="tel" number={this.state.number} onChange={this.handleChange} />
+        <Button type="submit" label={'Add contact'} />
       </FancyForm>
     );
   }
